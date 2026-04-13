@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:text="Create Account"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- FULL NAME -->
+        <EditText
+            android:id="@+id/edit_name"
+            android:hint="Full Name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"/>
+
+        <!-- EMAIL -->
+        <EditText
+            android:id="@+id/edit_email"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:inputType="textEmailAddress"/>
+
+        <!-- PHONE -->
+        <EditText
+            android:id="@+id/edit_phone"
+            android:hint="Phone Number"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:inputType="phone"/>
+
+        <!-- PASSWORD -->
+        <EditText
+            android:id="@+id/edit_password"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:inputType="textPassword"/>
+
+        <!-- CONFIRM PASSWORD -->
+        <EditText
+            android:id="@+id/edit_confirm_password"
+            android:hint="Confirm Password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:inputType="textPassword"/>
+
+        <!-- GENDER -->
+        <Spinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"/>
+
+        <!-- ================= NEW PROFESSIONAL FIELDS ================= -->
+
+        <!-- DATE OF BIRTH -->
+        <EditText
+            android:id="@+id/edit_dob"
+            android:hint="Date of Birth (YYYY-MM-DD)"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"/>
+
+        <!-- NATIONAL ID -->
+        <EditText
+            android:id="@+id/edit_national_id"
+            android:hint="National ID / Passport"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"/>
+
+        <!-- BLOOD TYPE -->
+        <Spinner
+            android:id="@+id/spinner_blood"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"/>
+
+        <!-- ALLERGIES -->
+        <EditText
+            android:id="@+id/edit_allergies"
+            android:hint="Allergies"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"/>
+
+        <!-- CHRONIC DISEASES -->
+        <EditText
+            android:id="@+id/edit_diseases"
+            android:hint="Chronic Diseases"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"/>
+
+        <!-- MEDICATIONS -->
+        <EditText
+            android:id="@+id/edit_medications"
+            android:hint="Current Medications"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"/>
+
+        <!-- ADDRESS -->
+        <EditText
+            android:id="@+id/edit_address"
+            android:hint="Address"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"/>
+
+        <!-- COUNTRY -->
+        <Spinner
+            android:id="@+id/spinner_country"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"/>
+
+        <!-- CITY -->
+        <Spinner
+            android:id="@+id/spinner_city"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"/>
+
+        <!-- BUTTON -->
+        <Button
+            android:id="@+id/button_register"
+            android:text="Create Account"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button_blue"/>
+
+    </LinearLayout>
+
+</ScrollView>
