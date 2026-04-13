@@ -1,0 +1,9 @@
+﻿public class StaffUser
+{
+    public int Id { get; set; }
+
+    public string StaffId { get; set; } = "";
+    public string Role { get; set; } = "";
+    public string FullName { get; set; } = "";   // ✅ ADD THIS
+    public string PasswordHash { get; set; } = "";
+}
