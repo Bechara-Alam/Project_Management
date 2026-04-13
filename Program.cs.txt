@@ -1,0 +1,70 @@
+using HospitalAPI.Data;
+using HospitalAPI.Models;
+using Microsoft.EntityFrameworkCore;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// =============================
+// 🔥 FORCE API TO LISTEN ON ALL NETWORKS
+// =============================
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5116); // IMPORTANT
+});
+
+// =============================
+// Add services
+// =============================
+builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// =============================
+// Database connection
+// =============================
+builder.Services.AddDbContext<HospitalDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// =============================
+// 🔔 Initialize Firebase
+// =============================
+if (FirebaseApp.DefaultInstance == null)
+{
+    var credential = GoogleCredential
+                        .FromFile("Firebase/serviceAccountKey.json");
+
+    FirebaseApp.Create(new AppOptions()
+    {
+        Credential = credential
+    });
+}
+
+// =============================
+// Build app
+// =============================
+var app = builder.Build();
+
+// =============================
+// Swagger
+// =============================
+app.UseSwagger();
+app.UseSwaggerUI();
+
+// =============================
+// ❌ REMOVE HTTPS REDIRECTION (IMPORTANT)
+// =============================
+// app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+
+
+// =============================
+// Run API
+// =============================
+app.Run();
