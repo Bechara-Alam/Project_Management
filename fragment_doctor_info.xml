@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:gravity="center"
+            android:background="@drawable/bg_doctor_header_gradient">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_doctor_info"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/ic_doctor"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- NAME -->
+        <TextView
+            android:id="@+id/text_view_name_doctor_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Dr Name"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <!-- SPECIALIZATION -->
+        <TextView
+            android:id="@+id/text_view_field_doctor_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cardiology"
+            android:textColor="#2563EB"/>
+
+        <!-- ⭐ RATING -->
+        <RatingBar
+            android:id="@+id/rating_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="4"
+            android:stepSize="0.5"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <!-- PHONE CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"/>
+
+                <TextView
+                    android:id="@+id/text_view_phone_doctor_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="76123456"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add_review"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Add Review"
+            android:layout_margin="16dp"
+            android:backgroundTint="#2563EB"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"/>
+        <!-- 📞 CALL -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_call_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="Call Doctor"
+            android:backgroundTint="#10B981"
+            app:icon="@android:drawable/ic_menu_call"/>
+
+        <!-- 💬 WHATSAPP -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_whatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="16dp"
+            android:text="Chat on WhatsApp"
+            android:backgroundTint="#25D366"
+            app:icon="@android:drawable/ic_dialog_email"/>
+
+        <!-- BOOK -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_doctor_book_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:text="Book Appointment"
+            android:backgroundTint="#2563EB"/>
+
+    </LinearLayout>
+
+</ScrollView>
