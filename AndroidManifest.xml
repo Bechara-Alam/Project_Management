@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/hospital_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/hospital_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tatwa10"
+        android:usesCleartextTraffic="true">
+
+        <!-- Firebase -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!-- 🔥 SPLASH SCREEN (FIRST SCREEN NOW) -->
+        <activity
+            android:name=".StartingActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Tatwa10.Splash">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+
+        <!-- Other Activities -->
+        <activity
+            android:name=".DoctorMainActivity"
+            android:theme="@style/Theme.Tatwa10" />
+
+        <activity
+            android:name=".DoctorVerificationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Tatwa10" />
+
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PhoneVerificationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AddProfileActivity"
+            android:exported="false" />
+
+        <activity android:name=".LabActivity"/>
+        <activity android:name=".HospitalAdminActivity"/>
+        <activity android:name=".CreateAccountActivity"/>
+        <activity android:name=".ReservationActivity"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".PaymentSuccessActivity" />
+
+    </application>
+
+</manifest>
